@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+
+        .quiz-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #answer-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+         <div class="quiz-container">
+        <div id="start-page">
+            <h1>Welcome to the Quiz!</h1>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-page" class="hidden">
+            <h2 id="question-text">Question goes here?</h2>
+            <div id="answer-buttons">
+            </div>
+            <p id="progress">Question 1 of 3</p>
+        </div>
+
+        <div id="results-page" class="hidden">
+            <h1>Quiz Completed!</h1>
+            <p id="score-text"></p>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
